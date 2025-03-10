@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tarea6.Vista.ContainerViews.WordpressPage"
+             BackgroundColor="#150064"
+             Title="WordpressPage">
+
+    <VerticalStackLayout Padding="30"
+                         Spacing="20">
+
+        <Label Text="Últimas Noticias"
+               FontSize="24"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               TextColor="White" />
+        
+        
+        <Image x:Name="WebsiteLogo"
+               WidthRequest="150"
+               HeightRequest="150"
+               HorizontalOptions="Center"
+               IsVisible="False" />
+        
+        <CollectionView x:Name="NewsCollectionView"
+                        BackgroundColor="Transparent"
+                        IsVisible="False">
+            
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BackgroundColor="#222"
+                           Padding="10"
+                           CornerRadius="1"
+                           Margin="5">
+                        <VerticalStackLayout>
+                            <Label Text="{Binding Title}"
+                                   FontSize="20"
+                                   FontAttributes="Bold"
+                                   TextColor="White" />
+                            <Label Text="{Binding Excerpt}"
+                                   FontSize="10"
+                                   TextColor="White" />
+                            <Button Text="Leer Más"
+                                    FontSize="14"
+                                    BackgroundColor="#00e8ff"
+                                    TextColor="#150064"
+                                    Clicked="OnVisitNews"
+                                    CommandParameter="{Binding Link}" />
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        
+        <Button Text="Cargar Noticias"
+                FontSize="18"
+                BackgroundColor="#00e8ff"
+                TextColor="#150064"
+                Clicked="OnFetchNewsClicked" />
+        
+    </VerticalStackLayout>
+</ContentPage>

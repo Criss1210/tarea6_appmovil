@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tarea6.Vista.ContainerViews.AcercaDeMi"
+             BackgroundColor="#150064"
+             Title="AcercaDeMi">
+    <VerticalStackLayout Padding="30"
+                         Spacing="20"
+                         VerticalOptions="Center">
+        <!-- Foto de Perfil -->
+        <Frame Padding="10"
+               BackgroundColor="White"
+               HorizontalOptions="Center">
+            <Image Source="cristal.jpeg"
+                   WidthRequest="190"
+                   HeightRequest="250"
+                   Aspect="AspectFill" />
+        </Frame>
+        <!-- Nombre -->
+        <Label Text="Cristal Hernandez"
+               FontSize="20"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               TextColor="White" />
+        <!-- Descripción -->
+        
+        <!-- Datos de Contacto -->
+        <Frame BackgroundColor="#150064"
+               Padding="15"
+               CornerRadius="15">
+            <VerticalStackLayout Spacing="10">
+                <HorizontalStackLayout>
+                    <Image Source="gmail.png"
+                           WidthRequest="20"
+                           HeightRequest="20" />
+                    <Label Text="Email:"
+                           TextColor="White"
+                           FontSize="16" />
+                </HorizontalStackLayout>
+                
+                <HorizontalStackLayout>
+                    <Label Text="cristalonedys@gmail.com"
+                           TextColor="White"
+                           FontSize="16" />
+                </HorizontalStackLayout>
+                
+                <HorizontalStackLayout>
+                    <Image Source="phone.png"
+                           WidthRequest="20"
+                           HeightRequest="20" />
+                    <Label Text="Teléfono:"
+                           TextColor="White"
+                           FontSize="16" />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout>
+                   <Label Text="849-260-4310"
+                           TextColor="White"
+                           FontSize="16" />
+                </HorizontalStackLayout>
+
+            </VerticalStackLayout>
+        </Frame>
+    </VerticalStackLayout>
+</ContentPage>

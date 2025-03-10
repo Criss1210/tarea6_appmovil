@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tarea6.Vista.ContainerViews.UniversidadPage"
+             BackgroundColor="#150064"
+             Title="UniversidadPage">
+    <ScrollView>
+        <VerticalStackLayout Padding="90"
+                             Spacing="50">
+            <Label Text="Universidades"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="White" />
+            <Entry x:Name="CountryEntry"
+                   Placeholder="Escribe un país"
+                   FontSize="18"
+                   TextColor="#150064"
+                   BackgroundColor="#c0f9ff"
+                   PlaceholderColor="Gray"
+                   HorizontalOptions="Fill" />
+            <Button Text="Buscar"
+                    FontSize="18"
+                    BackgroundColor="#00e8ff"
+                    TextColor="#150064"
+                    Clicked="OnSearchClicked" />
+            <CollectionView x:Name="UniversitiesCollectionView"
+                            ItemsSource="{Binding Universities}"
+                            BackgroundColor="Transparent">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BackgroundColor="#150064"
+                               Padding="20"
+                               CornerRadius="1"
+                               Margin="5">
+                            <VerticalStackLayout>
+                                <Label Text="{Binding Name}"
+                                       FontSize="18"
+                                       FontAttributes="Bold"
+                                       TextColor="White" />
+                                <Label Text="{Binding Domain}"
+                                       FontSize="14"
+                                       TextColor="Gray" />
+                                <Button Text="Visitar Página"
+                                        FontSize="14"
+                                        BackgroundColor="#00e8ff"
+                                        TextColor="#150064"
+                                        Clicked="OnVisitWebsite"
+                                        CommandParameter="{Binding WebPage}" />
+                            </VerticalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

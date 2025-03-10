@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tarea6.Vista.ContainerViews.PokemonPage"
+             BackgroundColor="#150064"
+             Title="PokemonPage">
+    <VerticalStackLayout Padding="90"
+                         Spacing="30">
+        <Label Text="Pokémon"
+               FontSize="24"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               TextColor="White" />
+        <Entry x:Name="PokemonEntry"
+               Placeholder="Nombre del Pokémon"
+               FontSize="18"
+               TextColor="#150064"
+               BackgroundColor="#c0f9ff"
+               PlaceholderColor="Gray"
+               HorizontalOptions="Fill" />
+        <Button Text="Buscar"
+                FontSize="18"
+                BackgroundColor="#00e8ff"
+                TextColor="#150064"
+                Clicked="OnSearchPokemonClicked" />
+        <Image x:Name="PokemonImage"
+               WidthRequest="150"
+               HeightRequest="150"
+               HorizontalOptions="Center"
+               IsVisible="False" />
+        <Label x:Name="PokemonNameLabel"
+               FontSize="15"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               TextColor="White"
+               IsVisible="False" />
+        <Label x:Name="BaseExperienceLabel"
+               FontSize="15"
+               HorizontalOptions="Center"
+               TextColor="White"
+               IsVisible="False" />
+        <Label Text="Habilidades:"
+               FontSize="15"
+               TextColor="White"
+               IsVisible="False"
+               x:Name="AbilitiesHeader" />
+        <CollectionView x:Name="AbilitiesCollectionView"
+                        BackgroundColor="Transparent"
+                        IsVisible="False">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BackgroundColor="#00e8ff"
+                           Padding="10"
+                           CornerRadius="1"
+                           Margin="5">
+                        <Label Text="{Binding}"
+                               FontSize="16"
+                               TextColor="#150064" />
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>
