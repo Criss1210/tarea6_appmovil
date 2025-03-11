@@ -7,24 +7,24 @@
     <VerticalStackLayout Padding="30"
                          Spacing="20"
                          VerticalOptions="Center">
-        <!-- Foto de Perfil -->
+        
         <Frame Padding="10"
                BackgroundColor="White"
                HorizontalOptions="Center">
-            <Image Source="cristal.jpeg"
+            <Image Source="cris.jpeg"
                    WidthRequest="190"
                    HeightRequest="250"
                    Aspect="AspectFill" />
         </Frame>
-        <!-- Nombre -->
+        
         <Label Text="Cristal Hernandez"
                FontSize="20"
                FontAttributes="Bold"
                HorizontalOptions="Center"
                TextColor="White" />
-        <!-- Descripción -->
         
-        <!-- Datos de Contacto -->
+        
+       
         <Frame BackgroundColor="#150064"
                Padding="15"
                CornerRadius="15">

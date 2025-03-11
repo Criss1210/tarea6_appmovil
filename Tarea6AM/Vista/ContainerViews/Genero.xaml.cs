@@ -40,12 +40,12 @@ public partial class GeneroPage : ContentPage
             }
             else if (genderResponse?.Gender == "female")
             {
-                BackgroundColor = Color.FromArgb("#d400b1"); // Rosa para femenino
+                BackgroundColor = Color.FromArgb("#d400b1"); 
                 ResultLabel.Text = $"El género de {name} es Femenino";
             }
             else
             {
-                BackgroundColor = Color.FromArgb("#757575"); // Gris si no se encuentra
+                BackgroundColor = Color.FromArgb("#757575"); 
                 ResultLabel.Text = $"No se pudo reconocer el genero de: {name}";
             }
         }
